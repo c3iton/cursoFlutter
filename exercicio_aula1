@@ -28,5 +28,5 @@ void main(List<String> arguments) {
   y = 12;
   y = 67.8;
   // eSCREVER hEELO WORD MAIS O RESULTADO DA CONTA do arquivo das pasta lib que é 42
-  print('A marca do produto é $nomeMarca. Com o valor de $preco e quantidade no estoque de $quantidade.');
+  print('A marca do produto é $nomeMarca. Com o valor de $preco e  a quantidade no estoque de $quantidade.');
 }
