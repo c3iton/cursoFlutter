@@ -1,0 +1,32 @@
+import 'package:primeira_aula/primeira_aula.dart' as primeira_aula;
+import 'dart:io';
+
+//Método Principal
+void main(List<String> arguments) {
+    print('Características do produto:');
+
+  print('Marca:');
+  var nomeMarca = stdin.readLineSync();
+  //Entrada, conversao leitura de dados do tipo inteiro
+
+  print('Preço:');
+  //o VAR é porque o dart infere automaticamente o tipo de dado, sem precisar declarar o tipo
+  var entradaPreco = stdin.readLineSync();
+  //ConversO
+  //ao da String para inteiro
+  var preco = double.parse(entradaPreco);
+
+//Entrada, conversao leitura de dados do tipo double
+
+  print('Quantidade:');
+  var entradaQuantidade = stdin.readLineSync();
+  //Conversao da String para double
+  var quantidade = int.parse(entradaQuantidade);
+
+//Quando uso uma variavel do tipo dinamyc, o tipo dela pode ser alterado automaticamente sem que haja necessidade de se mudar o tipo de variável
+  dynamic y = 'roberto';
+  y = 12;
+  y = 67.8;
+  // eSCREVER hEELO WORD MAIS O RESULTADO DA CONTA do arquivo das pasta lib que é 42
+  print('A marca do produto é $nomeMarca. Com o valor de $preco e quantidade no estoque de $quantidade.');
+}
