@@ -1,0 +1,66 @@
+import 'dart:io';
+
+void main(List<String> arguments) {
+  print('Neste sistema básico. o usuário irá inicialmente cadastrar as bananas compradas, porém as compras só são realizadas quando as bananas estão maduras e estão em quantidade maior que 5KG');
+
+  print('SysBan');
+  print('Sistema Básico de Compra e Vendas de Banana');
+
+
+  print('As bananas estão maduras? Responda S para sim, ou N caso não estejam:');
+  var banana = stdin.readLineSync();
+  print('Quantos Kilos tem disponibilidade?:');
+  var entradaBanana = stdin.readLineSync();
+  var pesoBanana = int.parse(entradaBanana);
+
+  if (banana == 'S' && pesoBanana > 5) {
+    print('As bananas estão maduras e temos alguns kilos em estoque depois de compradas:');
+    print('Quantas  kilos de bananas o cliente quer comprar?:');
+    var entradaBananasCliente = stdin.readLineSync();
+    var bananasCliente = int.parse(entradaBananasCliente);
+    if (bananasCliente <= pesoBanana) {
+      var bananasEstoque = pesoBanana - bananasCliente;
+      print(
+          'Venda executada.  Restam $bananasEstoque kilos de banana em estoque');
+    } else {
+      print('Nao existe quantidade suficiente;');
+      print('Venda Não Executada');
+    }
+  } else {
+    print(
+        'A compra de kilos de banana não foi executada, portanto também não é possível realizar vendas');
+  }
+}
+
+ /**
+  print('Informe sua presença:');
+
+  var entradaPresenca = stdin.readLineSync();
+  var presenca = int.parse(entradaPresenca);
+
+  if (presenca >= 75) {
+    if (nota >= 6) {
+      print('Aprovado');
+    } else {
+      print('Informe a nota da recuperação');
+      var entradaRecuperacao = stdin.readLineSync();
+      var recuperacao = double.parse(entradaRecuperacao);
+      if (recuperacao >= 6) {
+        print('Aprovado na recuperacao');
+      } else {
+        print('Reprovado na recuperação');
+      }
+    }
+  } else {
+    print('Reprovado pela frequência');
+  }
+}
+  
+
+
+  O código irá solicitar a nota
+  * 
+verificar se é menor que 6
+
+informar que reprovou
+  */
