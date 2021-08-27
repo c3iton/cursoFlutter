@@ -74,7 +74,7 @@ void main(List<String> arguments) {
     'Batata',
     'Batata Doce'
   ];
-
+//
   verdes.forEach((verdes) => print(verdes));
 
   //Este método percorre a lista nomes e chama a função imprimir pra imprimir cada um deles
